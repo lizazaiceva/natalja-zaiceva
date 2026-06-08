@@ -1,0 +1,41 @@
+ErrorDocument 403 /404.html
+ErrorDocument 404 /404.html
+
+DirectoryIndex page22550928.html
+
+RewriteEngine On
+
+RewriteCond %{HTTP:X-Forwarded-Proto} =http
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} /robots.txt
+RewriteCond "%{DOCUMENT_ROOT}/robots_%{HTTP_HOST}.txt" -f
+RewriteRule ^(.*)$ robots_%{HTTP_HOST}.txt [NC,L]
+RewriteRule ^memento$ page19031501.html [NC]
+RewriteRule ^memento/$ page19031501.html [NC]
+
+RewriteRule ^gruppa$ page22489641.html [NC]
+RewriteRule ^gruppa/$ page22489641.html [NC]
+
+RewriteRule ^smelost$ page39120378.html [NC]
+RewriteRule ^smelost/$ page39120378.html [NC]
+
+RewriteRule ^silneevmeste$ page52667615.html [NC]
+RewriteRule ^silneevmeste/$ page52667615.html [NC]
+
+RewriteRule ^moigranitsy$ page66614325.html [NC]
+RewriteRule ^moigranitsy/$ page66614325.html [NC]
+
+RewriteRule ^anketa$ page66759877.html [NC]
+RewriteRule ^anketa/$ page66759877.html [NC]
+
+RewriteRule ^probuzdenie$ page71950933.html [NC]
+RewriteRule ^probuzdenie/$ page71950933.html [NC]
+
+RewriteRule ^yellowsubmarine$ page141098463.html [NC]
+RewriteRule ^yellowsubmarine/$ page141098463.html [NC]
+
+RewriteRule ^supervizia$ page143940443.html [NC]
+RewriteRule ^supervizia/$ page143940443.html [NC]
+
+

@@ -1,0 +1,290 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сильнее вместе — Терапевтическая группа | Наталья Зайцева</title>
+  <meta name="description" content="Терапевтическая группа «Сильнее вместе». Ежемесячные субботы. Рига, Kr. Barona 63-3. Наталья Зайцева и Наталья Моисейкова.">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,700&family=BIZ+UDPGothic:wght@400;700&family=Source+Code+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Source Code Pro', sans-serif; color: #4d4a42; background: #F1EFEB; line-height: 1.7; }
+    html[lang="ru"] .lv { display: none !important; }
+    html[lang="lv"] .ru { display: none !important; }
+
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(241,239,235,0.97); backdrop-filter: blur(10px); box-shadow: 0 1px 16px rgba(0,0,0,0.07); height: 64px; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; font-size: 1.05rem; color: #4A6375; text-decoration: none; }
+    .nav-links { display: flex; list-style: none; gap: 1.75rem; align-items: center; }
+    .nav-links a { font-family: 'Playfair Display', Georgia, serif; font-size: 0.78rem; font-weight: 600; color: #4A6375; text-decoration: none; letter-spacing: 0.07em; text-transform: uppercase; transition: color 0.2s; }
+    .nav-links a:hover { color: #7AB6D8; }
+    .nav-right { display: flex; align-items: center; gap: 1rem; }
+    .lang-toggle { display: flex; gap: 3px; }
+    .lang-btn { font-family: 'Playfair Display', Georgia, serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; padding: 0.28rem 0.65rem; border: 1.5px solid #7AB6D8; background: transparent; color: #7AB6D8; border-radius: 4px; cursor: pointer; transition: all 0.18s; }
+    .lang-btn.active { background: #7AB6D8; color: #F1EFEB; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: #4d4a42; }
+
+    .hero { padding-top: 64px; min-height: 65vh; display: flex; align-items: center; background: linear-gradient(135deg, #4A6375 0%, #7AB6D8 60%, #4A6375 100%); }
+    .hero-inner { max-width: 900px; margin: 0 auto; padding: 5rem 2rem; }
+    .hero-eyebrow { font-family: 'Playfair Display', Georgia, serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #B7CFE9; margin-bottom: 1rem; }
+    .hero-title { font-family: 'Playfair Display', Georgia, serif; font-size: 3rem; font-weight: 800; color: #F1EFEB; line-height: 1.1; margin-bottom: 1rem; }
+    .hero-sub { font-size: 1.05rem; color: rgba(241,239,235,0.75); margin-bottom: 2rem; max-width: 580px; }
+    .start-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(241,239,235,0.12); border: 1px solid rgba(241,239,235,0.25); color: #F1EFEB; font-family: 'Playfair Display', Georgia, serif; font-size: 0.85rem; font-weight: 700; padding: 0.6rem 1.2rem; border-radius: 30px; margin-bottom: 2rem; }
+    .btn-primary { display: inline-block; background: #7AB6D8; color: #F1EFEB; font-family: 'Playfair Display', Georgia, serif; font-size: 0.9rem; font-weight: 700; padding: 0.9rem 2rem; border-radius: 6px; text-decoration: none; box-shadow: 0 4px 20px rgba(0,0,0,0.25); transition: all 0.18s; }
+    .btn-primary:hover { background: #5A96BA; transform: translateY(-2px); }
+    .btn-outline { display: inline-block; border: 2px solid rgba(241,239,235,0.5); color: #F1EFEB; font-family: 'Playfair Display', Georgia, serif; font-size: 0.9rem; font-weight: 600; padding: 0.85rem 1.75rem; border-radius: 6px; text-decoration: none; margin-left: 1rem; transition: all 0.18s; }
+
+    section { padding: 5rem 2rem; }
+    .container { max-width: 960px; margin: 0 auto; }
+    .section-eyebrow { font-family: 'Playfair Display', Georgia, serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #7AB6D8; margin-bottom: 0.65rem; }
+    .section-heading { font-family: 'Playfair Display', Georgia, serif; font-size: 1.85rem; font-weight: 700; color: #4A6375; margin-bottom: 2.5rem; line-height: 1.25; }
+    .section-text { color: #4d4a42; font-size: 0.97rem; line-height: 1.9; margin-bottom: 1.25rem; }
+
+    .info-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+    .info-card { background: #FDF4DA; padding: 1.5rem; border-radius: 10px; border-top: 3px solid #7AB6D8; }
+    .info-card .icon { font-size: 1.5rem; margin-bottom: 0.6rem; }
+    .info-card .label { font-family: 'Playfair Display', Georgia, serif; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #768978; margin-bottom: 0.3rem; }
+    .info-card .value { font-family: 'Playfair Display', Georgia, serif; font-size: 1rem; font-weight: 700; color: #4A6375; line-height: 1.4; }
+    .info-card .sub { font-size: 0.82rem; color: #768978; margin-top: 0.2rem; }
+
+    .benefits-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .benefit-item { background: #FDF4DA; padding: 1.25rem; border-radius: 8px; font-size: 0.9rem; color: #4d4a42; line-height: 1.5; border-left: 3px solid #7AB6D8; }
+
+    .topics-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; }
+    .topic-tag { background: #F1EFEB; border: 1px solid #F1EFEB; padding: 0.6rem 1rem; border-radius: 20px; font-size: 0.82rem; color: #4d4a42; text-align: center; }
+
+    .dates-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; }
+    .date-chip { background: #F1EFEB; border: 1px solid #F1EFEB; padding: 0.6rem; border-radius: 8px; text-align: center; font-family: 'Playfair Display', Georgia, serif; font-weight: 700; color: #4A6375; font-size: 0.9rem; }
+    .date-chip .month { font-size: 0.68rem; font-weight: 600; color: #7AB6D8; text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 2px; }
+
+    .facilitators-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .fac-card { background: #FDF4DA; border-radius: 12px; padding: 2rem; }
+    .fac-name { font-family: 'Playfair Display', Georgia, serif; font-size: 1.05rem; font-weight: 700; color: #4A6375; margin-bottom: 0.25rem; }
+    .fac-role { font-size: 0.8rem; color: #7AB6D8; font-weight: 600; margin-bottom: 0.75rem; }
+    .fac-creds { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+    .fac-creds li { font-size: 0.85rem; color: #4d4a42; display: flex; gap: 0.5rem; align-items: flex-start; }
+    .fac-creds li::before { content: '✓'; color: #7AB6D8; font-weight: 700; flex-shrink: 0; }
+
+    .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .review-card { background: #FDF4DA; padding: 1.75rem; border-radius: 12px; }
+    .review-mark { font-family: Georgia, serif; font-size: 3rem; color: #7AB6D8; opacity: 0.2; line-height: 1; display: block; margin-bottom: 0.25rem; }
+    .review-text { font-size: 0.88rem; font-style: italic; color: #4d4a42; line-height: 1.8; margin-bottom: 1rem; }
+    .review-author { font-family: 'Playfair Display', Georgia, serif; font-size: 0.82rem; font-weight: 700; color: #4A6375; }
+
+    .register-block { background: #4A6375; }
+    .register-inner { text-align: center; max-width: 600px; margin: 0 auto; }
+    .register-inner h2 { font-family: 'Playfair Display', Georgia, serif; font-size: 2rem; font-weight: 800; color: #F1EFEB; margin-bottom: 1rem; }
+    .register-inner p { color: rgba(241,239,235,0.75); font-size: 1rem; line-height: 1.7; margin-bottom: 2rem; }
+    .contacts-row { display: flex; flex-direction: column; gap: 0.5rem; align-items: center; margin-top: 1.5rem; }
+    .contacts-row a { color: #B7CFE9; font-family: 'Playfair Display', Georgia, serif; font-size: 1rem; font-weight: 700; text-decoration: none; }
+    .contacts-row .name-label { color: rgba(241,239,235,0.45); font-size: 0.78rem; }
+
+    footer { background: #263545; color: rgba(241,239,235,0.4); text-align: center; padding: 2rem; font-size: 0.78rem; }
+    footer a { color: rgba(241,239,235,0.55); text-decoration: none; }
+
+    @media (max-width: 900px) {
+      .nav-links { display: none; position: fixed; top: 64px; left: 0; right: 0; background: #F1EFEB; flex-direction: column; padding: 0.5rem 2rem 1rem; gap: 0; box-shadow: 0 6px 20px rgba(0,0,0,0.1); }
+      .nav-links.open { display: flex; }
+      .nav-links li { border-bottom: 1px solid #FDF4DA; }
+      .nav-links a { display: block; padding: 0.8rem 0; }
+      .hamburger { display: flex; }
+      .hero-title { font-size: 2.2rem; }
+      .info-grid, .benefits-grid, .facilitators-grid, .reviews-grid { grid-template-columns: 1fr 1fr; }
+      .topics-grid, .dates-grid { grid-template-columns: repeat(3, 1fr); }
+      section { padding: 3.5rem 1.5rem; }
+    }
+    @media (max-width: 480px) {
+      .info-grid, .benefits-grid, .facilitators-grid, .reviews-grid { grid-template-columns: 1fr; }
+      .topics-grid, .dates-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    /* ── Font role overrides ──────────────────────── */
+    .section-eyebrow, .hero-eyebrow,
+    .nav-links a, .lang-btn,
+    .btn-primary, .btn-outline, .btn-light,
+    .info-card .label, .credentials-title,
+    .hero-tag, .chip, .start-badge, .since-badge, .limited,
+    .month-name, .date-chip .month,
+    .hero-role, .facilitator-role, .fac-role,
+    .price-name, .price-dur,
+    .review-author, .experience-badge .lbl,
+    .case-group-title, .contact-lbl,
+    .stat-label, .big-label, .group-meta,
+    .info-card .sub, .since-badge, .hero-eyebrow {
+      font-family: 'BIZ UDPGothic', monospace;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="indexnat.html" class="nav-logo"><span class="ru">Н. Зайцева</span><span class="lv">N. Zaiceva</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="indexnat.html#about" onclick="closeNav()"><span class="ru">Обо мне</span><span class="lv">Par mani</span></a></li>
+    <li><a href="indexnat.html#groups" onclick="closeNav()"><span class="ru">Группы</span><span class="lv">Grupas</span></a></li>
+    <li><a href="supervizia.html" onclick="closeNav()"><span class="ru">Супервизия</span><span class="lv">Supervīzija</span></a></li>
+    <li><a href="indexnat.html#contact" onclick="closeNav()"><span class="ru">Контакты</span><span class="lv">Kontakti</span></a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="lang-toggle">
+      <button class="lang-btn active" id="btnRU" onclick="setLang('ru')">RU</button>
+      <button class="lang-btn" id="btnLV" onclick="setLang('lv')">LV</button>
+    </div>
+    <button class="hamburger" id="hamburger" onclick="toggleNav()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <p class="hero-eyebrow"><span class="ru">Терапевтическая группа · Рига</span><span class="lv">Terapeitiskā grupa · Rīga</span></p>
+    <h1 class="hero-title">«Сильнее вместе»</h1>
+    <p class="hero-sub"><span class="ru">Групповая терапия — один из самых глубоких форматов психотерапии, особенно в работе с отношениями.</span><span class="lv">Grupu terapija — viens no dziļākajiem psihoterapijas formātiem, īpaši attiecību jomā.</span></p>
+    <div class="start-badge">📅 <span class="ru">Старт сентябрь 2025</span><span class="lv">Starts septembris 2025</span></div><br>
+    <a href="#register" class="btn-primary"><span class="ru">Записаться</span><span class="lv">Pieteikties</span></a>
+    <a href="#about" class="btn-outline"><span class="ru">Подробнее</span><span class="lv">Uzzināt vairāk</span></a>
+  </div>
+</section>
+
+<section style="background:#F1EFEB; padding:3rem 2rem;">
+  <div class="container">
+    <div class="info-grid">
+      <div class="info-card"><div class="icon">📅</div><div class="label"><span class="ru">Формат</span><span class="lv">Formāts</span></div><div class="value"><span class="ru">Субботы раз в месяц</span><span class="lv">Sestdienas reizi mēnesī</span></div><div class="sub">10:30–18:30</div></div>
+      <div class="info-card"><div class="icon">💰</div><div class="label"><span class="ru">Стоимость</span><span class="lv">Cena</span></div><div class="value">€120 <span style="font-size:0.8rem;font-weight:400"><span class="ru">/ встреча</span><span class="lv">/ tikšanās</span></span></div></div>
+      <div class="info-card"><div class="icon">📍</div><div class="label"><span class="ru">Адрес</span><span class="lv">Adrese</span></div><div class="value">Kr. Barona 63-3</div><div class="sub">Rīga</div></div>
+      <div class="info-card"><div class="icon">⏱️</div><div class="label"><span class="ru">Длительность</span><span class="lv">Ilgums</span></div><div class="value"><span class="ru">8 месяцев</span><span class="lv">8 mēneši</span></div></div>
+      <div class="info-card"><div class="icon">👥</div><div class="label"><span class="ru">Ведущие</span><span class="lv">Vadītājas</span></div><div class="value"><span class="ru">2 специалиста</span><span class="lv">2 speciālisti</span></div><div class="sub"><span class="ru">Закрытая группа</span><span class="lv">Slēgta grupa</span></div></div>
+      <div class="info-card"><div class="icon">🗣️</div><div class="label"><span class="ru">Язык</span><span class="lv">Valoda</span></div><div class="value"><span class="ru">Русский</span><span class="lv">Krievu</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="about" style="background: #F1EFEB;">
+  <div class="container">
+    <p class="section-eyebrow"><span class="ru">Почему группа?</span><span class="lv">Kāpēc grupa?</span></p>
+    <h2 class="section-heading"><span class="ru">Что даёт групповая терапия</span><span class="lv">Ko dod grupu terapija</span></h2>
+    <div class="benefits-grid">
+      <div class="benefit-item"><span class="ru">Поддержка и понимание от людей с похожим опытом</span><span class="lv">Atbalsts un sapratne no cilvēkiem ar līdzīgu pieredzi</span></div>
+      <div class="benefit-item"><span class="ru">Новый взгляд и решения сложных ситуаций</span><span class="lv">Jauns skatījums un risinājumi sarežģītās situācijās</span></div>
+      <div class="benefit-item"><span class="ru">Навыки общения: управление эмоциями, границы</span><span class="lv">Komunikācijas prasmes: emociju pārvaldīšana, robežas</span></div>
+      <div class="benefit-item"><span class="ru">Безопасное место для выражения чувств</span><span class="lv">Droša vieta jūtu izpaušanai</span></div>
+      <div class="benefit-item"><span class="ru">Мотивация и поддержка в изменениях</span><span class="lv">Motivācija un atbalsts pārmaiņās</span></div>
+      <div class="benefit-item"><span class="ru">Два опытных ведущих — более богатая динамика</span><span class="lv">Divi pieredzējuši vadītāji — bagātāka dinamika</span></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#FDF4DA;">
+  <div class="container">
+    <p class="section-eyebrow"><span class="ru">Темы</span><span class="lv">Tēmas</span></p>
+    <h2 class="section-heading"><span class="ru">О чём говорим на группе</span><span class="lv">Par ko runājam grupā</span></h2>
+    <div class="topics-grid">
+      <div class="topic-tag"><span class="ru">Самооценка</span><span class="lv">Pašvērtējums</span></div>
+      <div class="topic-tag"><span class="ru">Отношения с семьёй</span><span class="lv">Attiecības ar ģimeni</span></div>
+      <div class="topic-tag"><span class="ru">Партнёрство</span><span class="lv">Partnerattiecības</span></div>
+      <div class="topic-tag"><span class="ru">Одиночество</span><span class="lv">Vientulība</span></div>
+      <div class="topic-tag"><span class="ru">Ответственность</span><span class="lv">Atbildība</span></div>
+      <div class="topic-tag"><span class="ru">Смысл жизни</span><span class="lv">Dzīves jēga</span></div>
+      <div class="topic-tag"><span class="ru">Страх, смерть</span><span class="lv">Bailes, nāve</span></div>
+      <div class="topic-tag"><span class="ru">Стыд, вина</span><span class="lv">Kauns, vaina</span></div>
+      <div class="topic-tag"><span class="ru">Агрессия</span><span class="lv">Agresija</span></div>
+      <div class="topic-tag"><span class="ru">Апатия</span><span class="lv">Apātija</span></div>
+      <div class="topic-tag"><span class="ru">Любовь</span><span class="lv">Mīlestība</span></div>
+      <div class="topic-tag"><span class="ru">Сексуальность</span><span class="lv">Seksualitāte</span></div>
+    </div>
+  </div>
+</section>
+
+<section style="background: #F1EFEB;">
+  <div class="container">
+    <p class="section-eyebrow"><span class="ru">Расписание</span><span class="lv">Grafiks</span></p>
+    <h2 class="section-heading"><span class="ru">Даты встреч 2025–2026</span><span class="lv">Tikšanās datumi 2025–2026</span></h2>
+    <div class="dates-grid">
+      <div class="date-chip"><span class="month"><span class="ru">Сент</span><span class="lv">Sept</span></span>13.09</div>
+      <div class="date-chip"><span class="month"><span class="ru">Окт</span><span class="lv">Okt</span></span>4.10</div>
+      <div class="date-chip"><span class="month"><span class="ru">Окт</span><span class="lv">Okt</span></span>25.10</div>
+      <div class="date-chip"><span class="month"><span class="ru">Ноя</span><span class="lv">Nov</span></span>29.11</div>
+      <div class="date-chip"><span class="month"><span class="ru">Дек</span><span class="lv">Dec</span></span>13.12</div>
+      <div class="date-chip"><span class="month"><span class="ru">Янв</span><span class="lv">Jan</span></span>10.01</div>
+      <div class="date-chip"><span class="month"><span class="ru">Фев</span><span class="lv">Feb</span></span>7.02</div>
+      <div class="date-chip"><span class="month"><span class="ru">Март</span><span class="lv">Marts</span></span>7.03</div>
+      <div class="date-chip"><span class="month"><span class="ru">Март</span><span class="lv">Marts</span></span>28.03</div>
+      <div class="date-chip"><span class="month"><span class="ru">Апр</span><span class="lv">Apr</span></span>18.04</div>
+      <div class="date-chip"><span class="month"><span class="ru">Май</span><span class="lv">Maijs</span></span>9.05</div>
+    </div>
+    <p style="margin-top:1rem;font-size:0.82rem;color:#768978;"><span class="ru">* Присоединение возможно со второй встречи.</span><span class="lv">* Pievienošanās iespējama no otrās tikšanās reizes.</span></p>
+  </div>
+</section>
+
+<section style="background:#FDF4DA;">
+  <div class="container">
+    <p class="section-eyebrow"><span class="ru">Ведущие</span><span class="lv">Vadītājas</span></p>
+    <h2 class="section-heading"><span class="ru">О ведущих группы</span><span class="lv">Par grupas vadītājām</span></h2>
+    <div class="facilitators-grid">
+      <div class="fac-card">
+        <div class="fac-name">Наталья Зайцева</div>
+        <div class="fac-role">Gestalt-terapeite, supervizore</div>
+        <ul class="fac-creds">
+          <li>Сертифицированный специалист LGTA, EAGT</li>
+          <li>Магистр психологии управления и супервизии (RISEBA)</li>
+          <li>Консультант по семейным расстановкам (ICSR)</li>
+        </ul>
+        <div style="margin-top:0.75rem;font-size:0.85rem;color:#4d4a42;">+371 259 16374</div>
+      </div>
+      <div class="fac-card">
+        <div class="fac-name">Наталья Моисейкова</div>
+        <div class="fac-role">Gestalt-terapeite, Mg Psychology</div>
+        <ul class="fac-creds">
+          <li>Магистр психологии управления и супервизии</li>
+          <li>Гештальт-терапевт</li>
+          <li>Опыт ведения терапевтических групп</li>
+        </ul>
+        <div style="margin-top:0.75rem;font-size:0.85rem;color:#4d4a42;">+371 291 96091</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background: #F1EFEB;">
+  <div class="container">
+    <p class="section-eyebrow"><span class="ru">Отзывы</span><span class="lv">Atsauksmes</span></p>
+    <h2 class="section-heading"><span class="ru">Что говорят участники</span><span class="lv">Ko saka dalībnieki</span></h2>
+    <div class="reviews-grid">
+      <div class="review-card"><span class="review-mark">"</span><p class="review-text">Преодолел тревогу общения, развил эмпатию, стал эмоционально устойчивым. Два ведущих — это ценно.</p><div class="review-author">— Сергей, 34</div></div>
+      <div class="review-card"><span class="review-mark">"</span><p class="review-text">Получила свободу выражать эмоции и уверенность в себе. Группа стала пространством настоящей поддержки.</p><div class="review-author">— Маргарита, 29</div></div>
+      <div class="review-card"><span class="review-mark">"</span><p class="review-text">Нашла поддержку в переживании горя. Два ведущих приносят разные перспективы — это очень помогает.</p><div class="review-author">— Елизавета, 50</div></div>
+      <div class="review-card"><span class="review-mark">"</span><p class="review-text">Есть «отсроченный положительный эффект» — не сразу, но постепенно понимаешь, что изменилось.</p><div class="review-author">— Диана, 45</div></div>
+      <div class="review-card"><span class="review-mark">"</span><p class="review-text">Увидела «слепые пятна» в своём поведении. Стала меньше центрироваться на себе, больше слышать других.</p><div class="review-author">— Надежда, 45</div></div>
+      <div class="review-card"><span class="review-mark">"</span><p class="review-text">Вышла из зоны комфорта. Самопринятие ускорилось. Практические инсайты работают до сих пор.</p><div class="review-author">— Мария</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="register-block" id="register">
+  <div class="container">
+    <div class="register-inner">
+      <h2><span class="ru">Записаться в группу</span><span class="lv">Pieteikties grupai</span></h2>
+      <p><span class="ru">Перед стартом необходима индивидуальная встреча с ведущими. Студенты Рижского института гештальта получают зачётные часы.</span><span class="lv">Pirms starta nepieciešama individuāla tikšanās ar vadītājiem. Rīgas Gestalt institūta studenti saņem ieskaitāmās stundas.</span></p>
+      <a href="indexnat.html#contact" class="btn-primary"><span class="ru">Связаться</span><span class="lv">Sazināties</span></a>
+      <div class="contacts-row">
+        <span class="name-label"><span class="ru">Наталья Зайцева:</span><span class="lv">Natālija Zaiceva:</span></span>
+        <a href="tel:+37125916374">+371 259 16374</a>
+        <span class="name-label"><span class="ru">Наталья Моисейкова:</span><span class="lv">Natālija Moiseikova:</span></span>
+        <a href="tel:+37129196091">+371 291 96091</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer><p><span class="ru">© 2025 Наталья Зайцева · <a href="indexnat.html">На главную</a></span><span class="lv">© 2025 Natālija Zaiceva · <a href="indexnat.html">Uz sākumlapu</a></span></p></footer>
+
+<script>
+  function setLang(l) { document.documentElement.setAttribute('lang',l); document.getElementById('btnRU').classList.toggle('active',l==='ru'); document.getElementById('btnLV').classList.toggle('active',l==='lv'); try{localStorage.setItem('nz_lang',l);}catch(e){} }
+  function toggleNav() { document.getElementById('navLinks').classList.toggle('open'); }
+  function closeNav() { document.getElementById('navLinks').classList.remove('open'); }
+  try{ var s=localStorage.getItem('nz_lang'); if(s==='lv') setLang('lv'); }catch(e){}
+</script>
+</body>
+</html>

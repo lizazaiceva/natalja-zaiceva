@@ -1,0 +1,1146 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Наталья Зайцева — Психотерапевт в Риге | Natālija Zaiceva — Psihoterapeite Rīgā</title>
+  <meta name="description" content="Наталья Зайцева — гештальт-терапевт, супервизор, расстановщик. Индивидуальная, семейная терапия и супервизия в Риге и онлайн.">
+  <meta name="keywords" content="психотерапевт Рига, гештальт терапия, семейные расстановки, супервизия, psihoterapeits Rīgā, gestalt terapija">
+  <meta property="og:title" content="Наталья Зайцева — Психотерапевт в Риге">
+  <meta property="og:description" content="Гештальт-терапевт, супервизор, расстановщик. Индивидуальная и семейная терапия в Риге и онлайн.">
+  <meta property="og:image" content="images/Screenshot_2021-10-1.png">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,700&family=BIZ+UDPGothic:wght@400;700&family=Source+Code+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /*
+      Golden ratio type & spacing scale  φ = 1.618
+      ─────────────────────────────────────────────
+      Type:    0.75 | 1 | 1.618 | 2.618 | 4.236 rem
+      Space:   0.618 | 1 | 1.618 | 2.618 | 4.236 | 6.854 rem
+      Leading: φ = 1.618 (body)   1.25 (headings)
+    */
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: 'Source Code Pro', monospace;
+      color: #4d4a42;
+      background: #F1EFEB;
+      line-height: 1.618;
+    }
+
+    /* ── Language ───────────────────────────────────────── */
+    html[lang="ru"] .lv  { display: none !important; }
+    html[lang="lv"] .ru  { display: none !important; }
+
+    /* ── Navigation ─────────────────────────────────────── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      background: rgba(241,239,235,0.97);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 1px 16px rgba(0,0,0,0.06);
+      height: 4rem;
+      padding: 0 2.618rem;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 700; font-size: 1.618rem;
+      color: #4A6375; text-decoration: none;
+      letter-spacing: 0; white-space: nowrap;
+      line-height: 1;
+    }
+
+    .nav-links {
+      display: flex; list-style: none;
+      gap: 1.618rem; align-items: center;
+    }
+
+    .nav-links a {
+      font-family: 'BIZ UDPGothic', sans-serif;
+      font-size: 0.75rem; font-weight: 700;
+      color: #4A6375; text-decoration: none;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: #7AB6D8; }
+
+    .nav-right { display: flex; align-items: center; gap: 1rem; }
+    .lang-toggle { display: flex; gap: 2px; }
+
+    .lang-btn {
+      font-family: 'BIZ UDPGothic', sans-serif;
+      font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 0.08em;
+      padding: 0.382rem 0.618rem;
+      border: 1px solid #7AB6D8;
+      background: transparent; color: #7AB6D8;
+      border-radius: 2px; cursor: pointer;
+      transition: all 0.18s;
+    }
+    .lang-btn.active { background: #7AB6D8; color: #F1EFEB; }
+    .lang-btn:hover:not(.active) { background: #FDF4DA; }
+
+    .hamburger {
+      display: none; flex-direction: column; gap: 4px;
+      background: none; border: none; cursor: pointer; padding: 4px;
+    }
+    .hamburger span { display: block; width: 20px; height: 1.5px; background: #4d4a42; transition: all 0.3s; }
+
+    /* ── Hero ────────────────────────────────────────────── */
+    .hero {
+      padding-top: 4rem; min-height: 100vh;
+      display: flex; align-items: center;
+      background: linear-gradient(135deg, #F1EFEB 0%, #FDF4DA 50%, #F1EFEB 100%);
+      position: relative; overflow: hidden;
+    }
+    .hero::after {
+      content: '';
+      position: absolute; top: -15%; right: -8%; width: 55%; height: 130%;
+      background: radial-gradient(ellipse at 60% 40%, rgba(122,182,216,0.07) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      max-width: 1080px; margin: 0 auto;
+      padding: 4.236rem 2.618rem;
+      display: grid; grid-template-columns: 1fr 38.2%;
+      gap: 4.236rem; align-items: center;
+      position: relative; z-index: 1;
+    }
+
+    .hero-eyebrow {
+      font-family: 'BIZ UDPGothic', sans-serif;
+      font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: #7AB6D8; margin-bottom: 1rem;
+    }
+
+    .hero-name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 4.236rem; font-weight: 800;
+      color: #4A6375; line-height: 1.1;
+      margin-bottom: 0.618rem;
+    }
+
+    .hero-role {
+      font-family: 'BIZ UDPGothic', sans-serif;
+      font-size: 1rem; font-weight: 400;
+      color: #768978; margin-bottom: 1.618rem;
+      letter-spacing: 0.06em;
+    }
+
+    .hero-bio {
+      font-size: 1rem; color: #4d4a42;
+      line-height: 1.618; margin-bottom: 2.618rem;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: #7AB6D8; color: #F1EFEB;
+      font-family: 'BIZ UDPGothic', sans-serif;
+      font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 1rem 1.618rem; border-radius: 2px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.18s;
+    }
+    .btn-primary:hover {
+      background: #5A96BA; transform: translateY(-2px);
+    }
+
+    .hero-tags {
+      display: flex; flex-wrap: wrap; gap: 0.618rem;
+      margin-top: 2.618rem;
+    }
+    .hero-tag {
+      background: transparent;
+      border: 1px solid rgba(74,99,117,0.3);
+      color: #768978;
+      font-family: 'BIZ UDPGothic', sans-serif;
+      font-size: 0.75rem; font-weight: 700;
+      padding: 0.382rem 0.618rem;
+      letter-spacing: 0.08em;
+    }
+
+    .hero-photo-wrap { position: relative; }
+
+    .photo-frame { width: 100%; overflow: hidden; }
+    .photo-frame img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+    .about-photo {
+      width: 100%; max-width: 320px;
+      overflow: hidden; margin: 0 auto 1.618rem;
+    }
+    .about-photo img { display: block; width: 100%; }
+
+    .faces-accent { width: 2.618rem; opacity: 0.15; display: block; margin-bottom: 1rem; }
+
+    .experience-badge {
+      position: absolute; bottom: -1rem; left: -1rem;
+      background: #F1EFEB;
+      padding: 1rem 1.618rem;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+    .experience-badge .num {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2.618rem; font-weight: 800; color: #7AB6D8;
+      display: block; line-height: 1;
+    }
+    .experience-badge .lbl {
+      font-family: 'BIZ UDPGothic', sans-serif;
+      font-size: 0.75rem; color: #768978;
+      font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-top: 0.382rem; display: block;
+    }
+
+    /* ── Common ─────────────────────────────────────────── */
+    section { padding: 2rem 2.618rem; }
+    .container { max-width: 1080px; margin: 0 auto; }
+
+    .section-eyebrow {
+      font-family: 'BIZ UDPGothic', sans-serif;
+      font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: #7AB6D8; margin-bottom: 0.618rem;
+    }
+
+    .section-heading {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2.618rem; font-weight: 700;
+      color: #4A6375; margin-bottom: 1.618rem;
+      line-height: 1.2;
+    }
+
+    /* ── About ───────────────────────────────────────────── */
+    .about {
+      background: #F1EFEB;
+      display: grid;
+      grid-template-columns: 1.618fr 1fr;
+      grid-template-rows: auto auto;
+      padding: 0;
+    }
+
+    .about-image-col {
+      grid-column: 1; grid-row: 1;
+      background: #F1EFEB;
+      display: flex; align-items: center; justify-content: center;
+      height: 65vh;
+      overflow: hidden;
+    }
+    .about-image-col img {
+      width: auto; height: 100%;
+      object-fit: contain;
+      object-position: center top;
+      display: block;
+    }
+
+    .about-content-col {
+      grid-column: 2; grid-row: 1;
+      padding: 2rem 2rem;
+      display: flex; flex-direction: column;
+      justify-content: center;
+      gap: 0.618rem;
+    }
+    .about-content-col .section-eyebrow { margin-bottom: 0; }
+    .about-content-col .section-heading {
+      font-size: 1.618rem; margin-bottom: 0; line-height: 1.25;
+    }
+
+    .about-text p {
+      color: #4d4a42; font-size: 0.875rem;
+      line-height: 1.618; margin: 0;
+    }
+    .about-text p + p { margin-top: 1rem; }
+
+    .about-quote {
+      border-left: 2px solid #7AB6D8;
+      padding: 0.618rem 1.618rem;
+    }
+    .about-quote p {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1rem; font-style: italic; font-weight: 400;
+      color: #4A6375 !important; line-height: 1.25;
+      margin: 0 !important;
+    }
+
+    .since-badge {
+      display: inline-block;
+      background: #7AB6D8; color: #F1EFEB;
+      font-family: 'BIZ UDPGothic', sans-serif;
+      font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 0.382rem 0.618rem;
+    }
+
+    /* Credentials running ticker */
+    .cred-ticker-wrap {
+      grid-column: 1 / -1; grid-row: 2;
+      overflow: hidden;
+      background: #FDF4DA;
+      padding: 0.618rem 0;
+    }
+    .cred-ticker {
+      display: flex; width: max-content;
+      animation: ticker-scroll 40s linear infinite;
+    }
+    .cred-ticker:hover { animation-play-state: paused; }
+    .cred-item {
+      font-family: 'BIZ UDPGothic', sans-serif;
+      font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: #768978; white-space: nowrap;
+      padding: 0 2rem;
+    }
+    .cred-item::before { content: '✓  '; color: #7AB6D8; }
+    @keyframes ticker-scroll {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    /* ── Issues ──────────────────────────────────────────── */
+    .issues { background: #FDF4DA; }
+
+    .issues-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+    .issue-card {
+      background: #F1EFEB; padding: 1rem 1.618rem;
+      font-size: 1rem; color: #4d4a42;
+      line-height: 1.618;
+      border-left: 2px solid #7AB6D8;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .issue-card:hover {
+      box-shadow: 0 4px 16px rgba(74,99,117,0.1);
+      transform: translateY(-2px);
+    }
+
+    /* ── Format ──────────────────────────────────────────── */
+    .format { background: #F1EFEB; }
+
+    .format-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 1.618rem;
+    }
+    .format-card {
+      background: #FDF4DA; padding: 1.618rem;
+    }
+    .format-card h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.618rem; font-weight: 700;
+      color: #4A6375; margin-bottom: 1rem;
+      line-height: 1.25;
+    }
+    .format-list { list-style: none; }
+    .format-list li {
+      padding: 0.618rem 0;
+      border-bottom: 1px solid #F1EFEB;
+      color: #4d4a42; font-size: 1rem;
+      display: flex; align-items: flex-start; gap: 0.618rem;
+    }
+    .format-list li:last-child { border-bottom: none; }
+    .format-list li::before {
+      content: '→'; color: #7AB6D8;
+      font-weight: 700; flex-shrink: 0; margin-top: 2px;
+    }
+
+    /* ── Pricing ─────────────────────────────────────────── */
+    .pricing { background: #FDF4DA; }
+
+    .pricing-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1.618rem;
+    }
+    .price-card {
+      background: #F1EFEB; padding: 2.618rem 1.618rem;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .price-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(74,99,117,0.12);
+    }
+    .price-card.highlighted { background: #4A6375; color: #F1EFEB; }
+    .price-icon { font-size: 1.618rem; margin-bottom: 1rem; }
+    .price-name {
+      font-family: 'BIZ UDPGothic', sans-serif;
+      font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: #4A6375; margin-bottom: 0.382rem;
+    }
+    .price-card.highlighted .price-name { color: #B7CFE9; }
+    .price-dur {
+      font-family: 'BIZ UDPGothic', sans-serif;
+      font-size: 0.75rem; color: #768978;
+      margin-bottom: 1.618rem; letter-spacing: 0.06em;
+    }
+    .price-card.highlighted .price-dur { color: #B7CFE9; opacity: 0.7; }
+    .price-amount {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2.618rem; font-weight: 800;
+      color: #7AB6D8; line-height: 1;
+    }
+    .price-card.highlighted .price-amount { color: #B7CFE9; }
+
+    /* ── Testimonials ────────────────────────────────────── */
+    .testimonials { background: #F1EFEB; }
+
+    .testimonials-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1.618rem;
+    }
+    .review-card {
+      background: #FDF4DA; padding: 1.618rem;
+    }
+    .review-mark {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 4.236rem;
+      color: #7AB6D8; opacity: 0.25; line-height: 0.8;
+      margin-bottom: 0.618rem; display: block;
+    }
+    .review-text {
+      font-size: 1rem; font-style: italic;
+      color: #4d4a42; line-height: 1.618;
+      margin-bottom: 1.618rem;
+    }
+    .review-author {
+      font-family: 'BIZ UDPGothic', sans-serif;
+      font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: #4A6375;
+    }
+
+    /* ── Supervision ─────────────────────────────────────── */
+    .supervision { background: #FDF4DA; }
+
+    .supervision-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 2.618rem; align-items: start;
+    }
+    .supervision-text p {
+      color: #4d4a42; font-size: 1rem;
+      line-height: 1.618; margin-bottom: 1.618rem;
+    }
+    .supervision-list { list-style: none; display: flex; flex-direction: column; gap: 1rem; }
+    .supervision-list li {
+      background: #F1EFEB; padding: 1rem 1.618rem;
+      font-size: 1rem; color: #4d4a42; line-height: 1.618;
+      display: flex; gap: 0.618rem; align-items: flex-start;
+    }
+    .supervision-list li::before {
+      content: '→'; color: #7AB6D8;
+      font-weight: 700; flex-shrink: 0; margin-top: 2px;
+    }
+
+    /* ── Groups ──────────────────────────────────────────── */
+    .groups { background: #4A6375; }
+    .groups .section-eyebrow { color: #B7CFE9; }
+    .groups .section-heading { color: #F1EFEB; }
+
+    .groups-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 1.618rem;
+    }
+    .group-card {
+      background: rgba(241,239,235,0.06);
+      border: 1px solid rgba(241,239,235,0.15);
+      padding: 1.618rem;
+      transition: background 0.2s;
+    }
+    .group-card:hover { background: rgba(241,239,235,0.12); }
+    .group-name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.618rem; font-weight: 700;
+      color: #B7CFE9; margin-bottom: 0.618rem;
+      line-height: 1.25;
+    }
+    .group-meta {
+      font-family: 'BIZ UDPGothic', sans-serif;
+      font-size: 0.75rem; color: rgba(241,239,235,0.6);
+      line-height: 1.618; letter-spacing: 0.04em;
+    }
+    .group-meta a {
+      color: #B7CFE9; font-size: 0.75rem;
+      font-family: 'BIZ UDPGothic', sans-serif;
+      font-weight: 700; letter-spacing: 0.08em;
+    }
+
+    /* ── Contact ─────────────────────────────────────────── */
+    .contact { background: #F1EFEB; }
+
+    .contact-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 2.618rem; align-items: start;
+    }
+    .contact-items { display: flex; flex-direction: column; gap: 1.618rem; }
+    .contact-row { display: flex; align-items: flex-start; gap: 1.618rem; }
+    .contact-icon-box {
+      width: 2.618rem; height: 2.618rem; flex-shrink: 0;
+      background: #7AB6D8;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .contact-icon-box svg { width: 1rem; height: 1rem; fill: #F1EFEB; }
+    .contact-lbl {
+      font-family: 'BIZ UDPGothic', sans-serif;
+      font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: #768978; margin-bottom: 0.382rem;
+    }
+    .contact-val {
+      font-size: 1rem; font-weight: 600; color: #4A6375;
+    }
+    .contact-val a { color: #4A6375; text-decoration: none; transition: color 0.2s; }
+    .contact-val a:hover { color: #7AB6D8; }
+
+    .cta-panel {
+      background: #7AB6D8; padding: 2.618rem;
+      color: #F1EFEB; text-align: center;
+    }
+    .cta-panel h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.618rem; font-weight: 700;
+      margin-bottom: 1rem; line-height: 1.25;
+    }
+    .cta-panel p {
+      font-size: 1rem; opacity: 0.85;
+      line-height: 1.618; margin-bottom: 1.618rem;
+    }
+    .btn-light {
+      display: inline-block;
+      background: #F1EFEB; color: #4A6375;
+      font-family: 'BIZ UDPGothic', sans-serif;
+      font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 1rem 1.618rem;
+      text-decoration: none;
+      transition: transform 0.18s, box-shadow 0.18s;
+    }
+    .btn-light:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    }
+
+    /* ── Footer ──────────────────────────────────────────── */
+    footer {
+      background: #263545;
+      color: rgba(241,239,235,0.4);
+      text-align: center; padding: 1.618rem;
+      font-size: 0.75rem;
+    }
+    footer a { color: rgba(241,239,235,0.55); text-decoration: none; }
+    footer a:hover { color: rgba(241,239,235,0.85); }
+
+    /* ── Mobile ──────────────────────────────────────────── */
+    @media (max-width: 900px) {
+      nav { padding: 0 1.618rem; height: 3.5rem; }
+      .nav-links {
+        display: none; position: fixed;
+        top: 3.5rem; left: 0; right: 0;
+        background: #F1EFEB;
+        flex-direction: column; padding: 0.618rem 1.618rem 1rem;
+        gap: 0; box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      }
+      .nav-links.open { display: flex; }
+      .nav-links li { border-bottom: 1px solid #FDF4DA; }
+      .nav-links a { display: block; padding: 1rem 0; }
+      .hamburger { display: flex; }
+
+      .hero { padding-top: 3.5rem; }
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 2.618rem; text-align: center;
+        padding: 2.618rem 1.618rem;
+      }
+      .hero-name { font-size: 2.618rem; }
+      .hero-photo-wrap { order: -1; max-width: 260px; margin: 0 auto; }
+      .experience-badge { bottom: -0.618rem; left: -0.618rem; }
+      .hero-tags { justify-content: center; }
+      .btn-primary { display: block; text-align: center; }
+
+      .about { grid-template-columns: 1fr; grid-template-rows: auto 1fr auto; }
+      .about-image-col { grid-column: 1; grid-row: 1; }
+      .about-image-col img { width: 100%; height: auto; object-fit: unset; }
+      .about-content-col { grid-column: 1; grid-row: 2; padding: 2.618rem 1.618rem; }
+      .cred-ticker-wrap { grid-column: 1; grid-row: 3; }
+      .about-quote p { font-size: 1rem; }
+      .supervision-grid, .contact-grid { grid-template-columns: 1fr; gap: 1.618rem; }
+      .format-grid { grid-template-columns: 1fr; gap: 1.618rem; }
+      .groups-grid { grid-template-columns: 1fr; gap: 1rem; }
+      .pricing-grid { grid-template-columns: 1fr; max-width: 340px; margin: 0 auto; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .issues-grid { grid-template-columns: 1fr 1fr; }
+
+      section { padding: 1.618rem 1.618rem; }
+      .section-heading { font-size: 1.618rem; margin-bottom: 1rem; }
+      .about { grid-template-columns: 1fr; }
+      .about-image-col { grid-column: 1; height: 50vh; }
+      .about-content-col { grid-column: 1; padding: 1.618rem; gap: 0.5rem; }
+      .about-quote p { font-size: 0.875rem; }
+    }
+
+    @media (max-width: 480px) {
+      .issues-grid { grid-template-columns: 1fr; }
+      .hero-name { font-size: 2.618rem; }
+      nav { padding: 0 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══ NAVIGATION ════════════════════════════════════════ -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">
+    <span class="ru">Н. Зайцева</span>
+    <span class="lv">N. Zaiceva</span>
+  </a>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about" onclick="closeNav()">
+      <span class="ru">Обо мне</span><span class="lv">Par mani</span>
+    </a></li>
+    <li><a href="#issues" onclick="closeNav()">
+      <span class="ru">С чем работаю</span><span class="lv">Ar ko strādāju</span>
+    </a></li>
+    <li><a href="#format" onclick="closeNav()">
+      <span class="ru">Формат</span><span class="lv">Formāts</span>
+    </a></li>
+    <li><a href="#pricing" onclick="closeNav()">
+      <span class="ru">Стоимость</span><span class="lv">Cenas</span>
+    </a></li>
+    <li><a href="#testimonials" onclick="closeNav()">
+      <span class="ru">Отзывы</span><span class="lv">Atsauksmes</span>
+    </a></li>
+    <li><a href="#groups" onclick="closeNav()">
+      <span class="ru">Группы</span><span class="lv">Grupas</span>
+    </a></li>
+    <li><a href="#contact" onclick="closeNav()">
+      <span class="ru">Контакты</span><span class="lv">Kontakti</span>
+    </a></li>
+  </ul>
+
+  <div class="nav-right">
+    <div class="lang-toggle">
+      <button class="lang-btn active" id="btnRU" onclick="setLang('ru')">RU</button>
+      <button class="lang-btn"        id="btnLV" onclick="setLang('lv')">LV</button>
+    </div>
+    <button class="hamburger" id="hamburger" onclick="toggleNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+
+<!-- ═══ HERO ══════════════════════════════════════════════ -->
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <p class="hero-eyebrow">
+        <span class="ru">Психотерапевт · Рига</span>
+        <span class="lv">Psihoterapeite · Rīga</span>
+      </p>
+      <h1 class="hero-name">
+        <span class="ru">Наталья<br>Зайцева</span>
+        <span class="lv">Natālija<br>Zaiceva</span>
+      </h1>
+      <p class="hero-role">
+        <span class="ru">Гештальт-терапевт · Супервизор · Расстановщик</span>
+        <span class="lv">Gestalt terapeite · Supervizore · Konstelāciju speciāliste</span>
+      </p>
+      <p class="hero-bio">
+        <span class="ru">С 2013 года веду индивидуальную, парную и групповую терапию, трансформационные игры. С 2019 года — супервизионная работа с практикующими специалистами.</span>
+        <span class="lv">Kopš 2013. gada vedu individuālo, pāru un grupu terapiju, transformācijas spēles. Kopš 2019. gada — supervīzijas darbs ar praktizējošiem speciālistiem.</span>
+      </p>
+      <a href="#contact" class="btn-primary">
+        <span class="ru">Записаться на консультацию</span>
+        <span class="lv">Pieteikties konsultācijai</span>
+      </a>
+      <div class="hero-tags">
+        <span class="hero-tag">LGTA · EAGT</span>
+        <span class="hero-tag">RISEBA Maģistrs / Магистр</span>
+        <span class="hero-tag">ICSR</span>
+      </div>
+    </div>
+
+    <div class="hero-photo-wrap">
+      <div class="photo-frame">
+        <img src="images/photo-about.png" alt="Наталья Зайцева — психотерапевт в Риге">
+      </div>
+      <div class="experience-badge">
+        <span class="num">12+</span>
+        <span class="lbl ru">лет опыта</span>
+        <span class="lbl lv">gadu pieredze</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ ABOUT ════════════════════════════════════════════ -->
+<section class="about" id="about">
+
+  <!-- Left: full-bleed image -->
+  <div class="about-image-col">
+    <img src="images/photo-hero.png" alt="Наталья Зайцева">
+  </div>
+
+  <!-- Right: text content -->
+  <div class="about-content-col">
+    <p class="section-eyebrow">
+      <span class="ru">Обо мне</span><span class="lv">Par mani</span>
+    </p>
+    <h2 class="section-heading">
+      <span class="ru">Кто я и как работаю</span>
+      <span class="lv">Kas es esmu un kā strādāju</span>
+    </h2>
+    <div class="about-text">
+      <p>
+        <span class="ru">Наталья Зайцева — гештальт-терапевт, расстановщик семей и супервизор. Работает с 2013 года с индивидуальными клиентами, парами и группами, проводит трансформационные игры.</span>
+        <span class="lv">Natālija Zaiceva — gestalt terapeite, ģimenes konstelāciju speciāliste un supervizore. Strādā kopš 2013. gada ar individuālajiem klientiem, pāriem un grupām, vada transformācijas spēles.</span>
+      </p>
+      <p>
+        <span class="ru">В работе опираюсь на терапевтическое присутствие и внимательное слушание. Помогаю увидеть неэффективные паттерны, обнаружить «слепые пятна» и создаю пространство для настоящих внутренних изменений.</span>
+        <span class="lv">Darbā balstos uz terapeitisko klātbūtni un uzmanīgu klausīšanos. Palīdzu ieraudzīt neefektīvos modeļus, atklāt "aklās vietas" un radīt telpu īstām iekšējām pārmaiņām.</span>
+      </p>
+    </div>
+    <div class="about-quote">
+      <p>
+        <span class="ru">«Помочь людям быть психологически здоровыми, устойчивыми, эмоционально образованными, вовлечёнными — и любить свою жизнь!»</span>
+        <span class="lv">"Palīdzēt cilvēkiem būt psiholoģiski veseliem, izturīgiem, emocionāli izglītotiem, iesaistītiem — un mīlēt savu dzīvi!"</span>
+      </p>
+    </div>
+    <div>
+      <span class="since-badge ru">Практикую с 2013 года</span>
+      <span class="since-badge lv">Praktizēju kopš 2013. gada</span>
+    </div>
+  </div>
+
+  <!-- Bottom: running credentials ticker (spans full width) -->
+  <div class="cred-ticker-wrap">
+    <div class="cred-ticker ru">
+      <span class="cred-item">Сертифицированный специалист гештальт-терапии (LGTA, EAGT)</span>
+      <span class="cred-item">Магистр психологии управления и супервизии (RISEBA)</span>
+      <span class="cred-item">Квалифицированный супервизор</span>
+      <span class="cred-item">Консультант по семейным расстановкам (ICSR)</span>
+      <span class="cred-item">Сертифицированный специалист гештальт-терапии (LGTA, EAGT)</span>
+      <span class="cred-item">Магистр психологии управления и супервизии (RISEBA)</span>
+      <span class="cred-item">Квалифицированный супервизор</span>
+      <span class="cred-item">Консультант по семейным расстановкам (ICSR)</span>
+    </div>
+    <div class="cred-ticker lv">
+      <span class="cred-item">Sertificēts gestalt terapijas speciālists (LGTA, EAGT)</span>
+      <span class="cred-item">Vadības psiholoģijas un supervīzijas maģistrs (RISEBA)</span>
+      <span class="cred-item">Kvalificēts supervizors</span>
+      <span class="cred-item">Ģimenes konstelāciju konsultants (ICSR)</span>
+      <span class="cred-item">Sertificēts gestalt terapijas speciālists (LGTA, EAGT)</span>
+      <span class="cred-item">Vadības psiholoģijas un supervīzijas maģistrs (RISEBA)</span>
+      <span class="cred-item">Kvalificēts supervizors</span>
+      <span class="cred-item">Ģimenes konstelāciju konsultants (ICSR)</span>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ═══ ISSUES ════════════════════════════════════════════ -->
+<section class="issues" id="issues">
+  <div class="container">
+    <p class="section-eyebrow">
+      <span class="ru">С чем я работаю</span><span class="lv">Ar ko es strādāju</span>
+    </p>
+    <h2 class="section-heading">
+      <span class="ru">Темы и запросы</span>
+      <span class="lv">Tēmas un jautājumi</span>
+    </h2>
+    <div class="issues-grid">
+      <div class="issue-card"><span class="ru">Личностные, семейные, профессиональные кризисы</span><span class="lv">Personīgās, ģimenes, profesionālās krīzes</span></div>
+      <div class="issue-card"><span class="ru">Тревога, беспокойство, апатия, депрессия</span><span class="lv">Trauksme, nemiers, apātija, depresija</span></div>
+      <div class="issue-card"><span class="ru">Неуверенность, самооценка, созависимость</span><span class="lv">Nedrošība, pašvērtējums, līdzatkarība</span></div>
+      <div class="issue-card"><span class="ru">Сложности в отношениях и расставания</span><span class="lv">Grūtības attiecībās un šķiršanās</span></div>
+      <div class="issue-card"><span class="ru">Принятие решений и ответственность</span><span class="lv">Lēmumu pieņemšana un atbildība</span></div>
+      <div class="issue-card"><span class="ru">Потери и переживание горя</span><span class="lv">Zaudējumi un sēru pārdzīvošana</span></div>
+      <div class="issue-card"><span class="ru">Профессиональная идентичность, стресс, выгорание</span><span class="lv">Profesionālā identitāte, stress, izdegšana</span></div>
+      <div class="issue-card"><span class="ru">Страх ошибки, осуждения, отказа</span><span class="lv">Bailes no kļūdām, nosodījuma, atteikuma</span></div>
+      <div class="issue-card"><span class="ru">Зависимость от чужого мнения</span><span class="lv">Atkarība no citu viedokļiem</span></div>
+      <div class="issue-card"><span class="ru">Трудности с выражением гнева</span><span class="lv">Grūtības ar dusmu izpausmi</span></div>
+      <div class="issue-card"><span class="ru">Стыд, вина, чувство неполноценности</span><span class="lv">Kauns, vaina, nepilnvērtības sajūta</span></div>
+      <div class="issue-card"><span class="ru">Страх смерти, тревога о здоровье</span><span class="lv">Nāves bailes, veselības trauksme</span></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ FORMAT ════════════════════════════════════════════ -->
+<section class="format" id="format">
+  <div class="container">
+    <p class="section-eyebrow">
+      <span class="ru">Формат работы</span><span class="lv">Darba formāts</span>
+    </p>
+    <h2 class="section-heading">
+      <span class="ru">Как проходят сессии</span>
+      <span class="lv">Kā notiek sesijas</span>
+    </h2>
+    <div class="format-grid">
+      <div class="format-card">
+        <h3>
+          <span class="ru">Где мы встречаемся</span>
+          <span class="lv">Kur tikamies</span>
+        </h3>
+        <ul class="format-list">
+          <li><span class="ru">Очно в Риге — Кр. Барона 36-9А</span><span class="lv">Klātienē Rīgā — Kr. Barona 36-9A</span></li>
+          <li><span class="ru">Онлайн — Zoom</span><span class="lv">Tiešsaistē — Zoom</span></li>
+          <li><span class="ru">Онлайн — Telegram</span><span class="lv">Tiešsaistē — Telegram</span></li>
+          <li><span class="ru">Онлайн — WhatsApp</span><span class="lv">Tiešsaistē — WhatsApp</span></li>
+        </ul>
+      </div>
+      <div class="format-card">
+        <h3>
+          <span class="ru">Методы работы</span>
+          <span class="lv">Darba metodes</span>
+        </h3>
+        <ul class="format-list">
+          <li><span class="ru">Гештальт-терапия</span><span class="lv">Gestalt terapija</span></li>
+          <li><span class="ru">Семейные расстановки</span><span class="lv">Ģimenes konstelācijas</span></li>
+          <li><span class="ru">Супервизия профессиональных случаев</span><span class="lv">Profesionālo gadījumu supervīzija</span></li>
+          <li><span class="ru">Типология личности по Эннеаграмме</span><span class="lv">Enneagrammas personības tipoloģija</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ PRICING ═══════════════════════════════════════════ -->
+<section class="pricing" id="pricing">
+  <div class="container">
+    <p class="section-eyebrow">
+      <span class="ru">Стоимость</span><span class="lv">Cenas</span>
+    </p>
+    <h2 class="section-heading">
+      <span class="ru">Стоимость консультаций</span>
+      <span class="lv">Konsultāciju cenas</span>
+    </h2>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="price-icon">🧍</div>
+        <div class="price-name"><span class="ru">Индивидуальная сессия</span><span class="lv">Individuālā sesija</span></div>
+        <div class="price-dur"><span class="ru">50 минут</span><span class="lv">50 minūtes</span></div>
+        <div class="price-amount">€60</div>
+      </div>
+      <div class="price-card highlighted">
+        <div class="price-icon">👫</div>
+        <div class="price-name"><span class="ru">Пара / Семья</span><span class="lv">Pāris / Ģimene</span></div>
+        <div class="price-dur"><span class="ru">90 минут</span><span class="lv">90 minūtes</span></div>
+        <div class="price-amount">€90</div>
+      </div>
+      <div class="price-card">
+        <div class="price-icon">🎓</div>
+        <div class="price-name"><span class="ru">Супервизия</span><span class="lv">Supervīzija</span></div>
+        <div class="price-dur"><span class="ru">50 минут</span><span class="lv">50 minūtes</span></div>
+        <div class="price-amount">€60</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ TESTIMONIALS ══════════════════════════════════════ -->
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <p class="section-eyebrow">
+      <span class="ru">Отзывы</span><span class="lv">Atsauksmes</span>
+    </p>
+    <h2 class="section-heading">
+      <span class="ru">Что говорят клиенты</span>
+      <span class="lv">Ko saka klienti</span>
+    </h2>
+    <div class="testimonials-grid">
+
+      <div class="review-card">
+        <span class="review-mark">"</span>
+        <p class="review-text">
+          <span class="ru">Я прошёл курс психотерапии у Натальи и получил отличную профессиональную помощь. После каждой сессии я чувствовал подъём настроения и уверенность в себе.</span>
+          <span class="lv">Esmu izgājis psihoterapijas kursu pie Natālijas un saņēmu izcilu profesionālu palīdzību. Pēc katras sesijas es jutos pacilāts un pārliecināts par sevi.</span>
+        </p>
+        <div class="review-author">— Павел / Pāvels</div>
+      </div>
+
+      <div class="review-card">
+        <span class="review-mark">"</span>
+        <p class="review-text">
+          <span class="ru">За довольно короткий срок терапии разобрался с накопившимися проблемами. Рекомендую Наталью как отличного специалиста в теме личностных кризисов.</span>
+          <span class="lv">Salīdzinoši īsā terapijas laikā sakārtoju sakrājušās problēmas. Iesaku Natāliju kā izcilu personīgo krīžu speciālisti.</span>
+        </p>
+        <div class="review-author">— Михаил / Mihails</div>
+      </div>
+
+      <div class="review-card">
+        <span class="review-mark">"</span>
+        <p class="review-text">
+          <span class="ru">Уже после первых двух сессий нашла ответы на главные вопросы. Она очень точно уловила из потока информации то самое важное.</span>
+          <span class="lv">Jau pēc pirmajām divām sesijām atradu atbildes uz galvenajiem jautājumiem. Viņa ļoti precīzi izvilka no informācijas plūsmas pašu svarīgāko.</span>
+        </p>
+        <div class="review-author">— Анастасия / Anastasija</div>
+      </div>
+
+      <div class="review-card">
+        <span class="review-mark">"</span>
+        <p class="review-text">
+          <span class="ru">Она очень ловко и почти мгновенно уловила из моего потока информации то самое важное, что изменило мой взгляд на ситуацию.</span>
+          <span class="lv">Viņa ļoti prasmīgi un gandrīz uzreiz izvilka no manas informācijas plūsmas pašu svarīgāko, kas mainīja manu skatījumu uz situāciju.</span>
+        </p>
+        <div class="review-author">— Алёна / Alena</div>
+      </div>
+
+      <div class="review-card">
+        <span class="review-mark">"</span>
+        <p class="review-text">
+          <span class="ru">Наша совместная работа с Натальей дала результат — мне стало легче и я смог выбраться из депрессии после тяжёлой потери.</span>
+          <span class="lv">Mūsu kopīgais darbs ar Natāliju deva rezultātu — man kļuva vieglāk un izdevās izkļūt no depresijas pēc smagas zaudējuma.</span>
+        </p>
+        <div class="review-author">— Александр / Aleksandrs</div>
+      </div>
+
+      <div class="review-card">
+        <span class="review-mark">"</span>
+        <p class="review-text">
+          <span class="ru">По завершению курса вышел «новым» человеком — понимающим, чего он хочет от жизни, и знающим, как к этому прийти.</span>
+          <span class="lv">Kursa beigās iznācu kā "jauns" cilvēks — saprotošs, ko vēlos no dzīves, un zinošs, kā tam pietuvoties.</span>
+        </p>
+        <div class="review-author">— Леонид / Leonīds</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ SUPERVISION ═══════════════════════════════════════ -->
+<section class="supervision" id="supervision">
+  <div class="container">
+    <img src="images/Be_My_Maid_of_Honor_1.png" alt="" class="faces-accent">
+    <p class="section-eyebrow">
+      <span class="ru">Супервизия</span><span class="lv">Supervīzija</span>
+    </p>
+    <h2 class="section-heading">
+      <span class="ru">Супервизия для специалистов</span>
+      <span class="lv">Supervīzija speciālistiem</span>
+    </h2>
+    <div class="supervision-grid">
+      <div class="supervision-text">
+        <p>
+          <span class="ru">С 2019 года веду супервизионную работу с практикующими психологами и терапевтами. Супервизия — профессиональная поддержка для тех, кто хочет разобрать сложные случаи, не допустить выгорания и продолжать расти.</span>
+          <span class="lv">Kopš 2019. gada vedu supervīzijas darbu ar praktizējošiem psihologiem un terapeitiem. Supervīzija ir profesionāls atbalsts tiem, kas vēlas analizēt sarežģītus gadījumus, novērst izdegšanu un turpināt augt.</span>
+        </p>
+        <p>
+          <span class="ru">Формат: индивидуальная или групповая работа. Очно в Риге или онлайн.</span>
+          <span class="lv">Formāts: individuāls vai grupu darbs. Klātienē Rīgā vai tiešsaistē.</span>
+        </p>
+        <div style="margin-top:1.75rem;">
+          <a href="#contact" class="btn-primary" style="font-size:0.85rem;padding:0.75rem 1.5rem;">
+            <span class="ru">Записаться на супервизию</span>
+            <span class="lv">Pieteikties supervīzijai</span>
+          </a>
+        </div>
+      </div>
+      <div>
+        <ul class="supervision-list">
+          <li><span class="ru">Разбор сложных терапевтических случаев</span><span class="lv">Sarežģītu terapeitisko gadījumu analīze</span></li>
+          <li><span class="ru">Профилактика профессионального выгорания</span><span class="lv">Profesionālās izdegšanas profilakse</span></li>
+          <li><span class="ru">Развитие профессиональных навыков</span><span class="lv">Profesionālo prasmju attīstīšana</span></li>
+          <li><span class="ru">Поддержка в кризисных ситуациях</span><span class="lv">Atbalsts krīzes situācijās</span></li>
+          <li><span class="ru">Работа с контрпереносом</span><span class="lv">Darbs ar kontrtransferenci</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ GROUPS ════════════════════════════════════════════ -->
+<section class="groups" id="groups">
+  <div class="container">
+    <p class="section-eyebrow">
+      <span class="ru">Терапевтические группы</span><span class="lv">Terapeitiskās grupas</span>
+    </p>
+    <h2 class="section-heading">
+      <span class="ru">Предстоящие группы в Риге</span>
+      <span class="lv">Gaidāmās grupas Rīgā</span>
+    </h2>
+    <div class="groups-grid">
+      <a class="group-card" href="yellowsubmarine.html" style="text-decoration:none;display:block;">
+        <div class="group-name">
+          <span class="ru">«Жёлтая подводная лодка»</span>
+          <span class="lv">"Dzeltenā zemūdene"</span>
+        </div>
+        <p class="group-meta">
+          <span class="ru">Гештальт-группа · Старт 4 августа 2026 · €60/встреча</span>
+          <span class="lv">Gestalt grupa · Starts 4. augusts 2026 · €60/tikšanās</span>
+        </p>
+        <p style="margin-top:0.75rem;font-size:0.78rem;color:#B7CFE9;font-family:'Playfair Display',sans-serif;font-weight:700;letter-spacing:0.05em;"><span class="ru">Подробнее →</span><span class="lv">Uzzināt vairāk →</span></p>
+      </a>
+      <a class="group-card" href="probuzdenie.html" style="text-decoration:none;display:block;">
+        <div class="group-name">
+          <span class="ru">«Пробуждение радости и живости»</span>
+          <span class="lv">"Prieka un dzīvīguma pamošanās"</span>
+        </div>
+        <p class="group-meta">
+          <span class="ru">Для женщин · Старт 18 сентября 2026 · €185/сессия</span>
+          <span class="lv">Sievietēm · Starts 18. septembris 2026 · €185/sesija</span>
+        </p>
+        <p style="margin-top:0.75rem;font-size:0.78rem;color:#B7CFE9;font-family:'Playfair Display',sans-serif;font-weight:700;letter-spacing:0.05em;"><span class="ru">Подробнее →</span><span class="lv">Uzzināt vairāk →</span></p>
+      </a>
+      <a class="group-card" href="silneevmeste.html" style="text-decoration:none;display:block;">
+        <div class="group-name">
+          <span class="ru">«Сильнее вместе»</span>
+          <span class="lv">"Stiprāki kopā"</span>
+        </div>
+        <p class="group-meta">
+          <span class="ru">Ежемесячные субботы · Рига · €120/встреча · 2 ведущих</span>
+          <span class="lv">Ikmēneša sestdienas · Rīga · €120/tikšanās · 2 vadītāji</span>
+        </p>
+        <p style="margin-top:0.75rem;font-size:0.78rem;color:#B7CFE9;font-family:'Playfair Display',sans-serif;font-weight:700;letter-spacing:0.05em;"><span class="ru">Подробнее →</span><span class="lv">Uzzināt vairāk →</span></p>
+      </a>
+      <a class="group-card" href="moigranitsy.html" style="text-decoration:none;display:block;">
+        <div class="group-name">
+          <span class="ru">«Мои границы — моя опора!»</span>
+          <span class="lv">"Manas robežas — mans atbalsts!"</span>
+        </div>
+        <p class="group-meta">
+          <span class="ru">Вторники 18:00–21:00 · Рига · €50/встреча</span>
+          <span class="lv">Otrdienas 18:00–21:00 · Rīga · €50/tikšanās</span>
+        </p>
+        <p style="margin-top:0.75rem;font-size:0.78rem;color:#B7CFE9;font-family:'Playfair Display',sans-serif;font-weight:700;letter-spacing:0.05em;"><span class="ru">Подробнее →</span><span class="lv">Uzzināt vairāk →</span></p>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ CONTACT ═══════════════════════════════════════════ -->
+<section class="contact" id="contact">
+  <div class="container">
+    <p class="section-eyebrow">
+      <span class="ru">Контакты</span><span class="lv">Kontakti</span>
+    </p>
+    <h2 class="section-heading">
+      <span class="ru">Записаться на консультацию</span>
+      <span class="lv">Pieteikties konsultācijai</span>
+    </h2>
+    <div class="contact-grid">
+      <div class="contact-items">
+
+        <div class="contact-row">
+          <div class="contact-icon-box">
+            <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.61 21 3 13.39 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.01L6.6 10.8z"/></svg>
+          </div>
+          <div>
+            <div class="contact-lbl"><span class="ru">Телефон</span><span class="lv">Tālrunis</span></div>
+            <div class="contact-val"><a href="tel:+37125916374">+371 259 16374</a></div>
+          </div>
+        </div>
+
+        <div class="contact-row">
+          <div class="contact-icon-box">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          </div>
+          <div>
+            <div class="contact-lbl"><span class="ru">Адрес</span><span class="lv">Adrese</span></div>
+            <div class="contact-val">Kr. Barona iela 36-9A, Rīga</div>
+          </div>
+        </div>
+
+        <div class="contact-row">
+          <div class="contact-icon-box">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </div>
+          <div>
+            <div class="contact-lbl"><span class="ru">Онлайн-профиль</span><span class="lv">Tiešsaistes profils</span></div>
+            <div class="contact-val"><a href="https://www.b17.ru" target="_blank" rel="noopener">b17.ru</a></div>
+          </div>
+        </div>
+
+        <div class="contact-row">
+          <div class="contact-icon-box">
+            <svg viewBox="0 0 24 24"><path d="M12 2.04C6.5 2.04 2 6.53 2 12.06 2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96 15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96C18.34 21.21 22 17.06 22 12.06 22 6.53 17.5 2.04 12 2.04Z"/></svg>
+          </div>
+          <div>
+            <div class="contact-lbl">Facebook</div>
+            <div class="contact-val">
+              <span class="ru">Написать в Facebook</span>
+              <span class="lv">Rakstīt Facebook</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="cta-panel">
+        <h3>
+          <span class="ru">Готовы сделать шаг?</span>
+          <span class="lv">Gatavs spert soli?</span>
+        </h3>
+        <p>
+          <span class="ru">Свяжитесь, чтобы записаться на первую консультацию. Провожу сессии очно в Риге на Кр. Барона 36-9А и онлайн.</span>
+          <span class="lv">Sazinieties, lai pieteiktos pirmajai konsultācijai. Sesijas notiek klātienē Rīgā, Kr. Barona 36-9A, un tiešsaistē.</span>
+        </p>
+        <a href="tel:+37125916374" class="btn-light">+371 259 16374</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ FOOTER ════════════════════════════════════════════ -->
+<footer>
+  <p>
+    <span class="ru">© 2025 Наталья Зайцева · Психотерапевт в Риге · </span>
+    <span class="lv">© 2025 Natālija Zaiceva · Psihoterapeite Rīgā · </span>
+    <a href="tel:+37125916374">+371 259 16374</a>
+  </p>
+</footer>
+
+
+<script>
+  function setLang(lang) {
+    document.documentElement.setAttribute('lang', lang);
+    document.getElementById('btnRU').classList.toggle('active', lang === 'ru');
+    document.getElementById('btnLV').classList.toggle('active', lang === 'lv');
+    try { localStorage.setItem('nz_lang', lang); } catch(e) {}
+  }
+
+  function toggleNav() {
+    document.getElementById('navLinks').classList.toggle('open');
+  }
+
+  function closeNav() {
+    document.getElementById('navLinks').classList.remove('open');
+  }
+
+  // Restore saved language preference
+  try {
+    var saved = localStorage.getItem('nz_lang');
+    if (saved === 'lv') setLang('lv');
+  } catch(e) {}
+
+  // Close mobile nav on outside click
+  document.addEventListener('click', function(e) {
+    var nav = document.getElementById('navLinks');
+    var ham = document.getElementById('hamburger');
+    if (nav.classList.contains('open') && !nav.contains(e.target) && !ham.contains(e.target)) {
+      nav.classList.remove('open');
+    }
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,225 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Игромарафон «Memento Mori» — Наталья Зайцева</title>
+  <meta name="description" content="Игромарафон «Memento Mori» — за 7 дней покончить с ленью и прокрастинацией. €85. Онлайн, закрытая группа.">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,700&family=BIZ+UDPGothic:wght@400;700&family=Source+Code+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Source Code Pro', sans-serif; color: #4d4a42; background: #F1EFEB; line-height: 1.7; }
+    html[lang="ru"] .lv { display: none !important; }
+    html[lang="lv"] .ru { display: none !important; }
+
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(241,239,235,0.97); backdrop-filter: blur(10px); box-shadow: 0 1px 16px rgba(0,0,0,0.07); height: 64px; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; font-size: 1.05rem; color: #4A6375; text-decoration: none; }
+    .nav-links { display: flex; list-style: none; gap: 1.75rem; align-items: center; }
+    .nav-links a { font-family: 'Playfair Display', Georgia, serif; font-size: 0.78rem; font-weight: 600; color: #4A6375; text-decoration: none; letter-spacing: 0.07em; text-transform: uppercase; transition: color 0.2s; }
+    .nav-links a:hover { color: #7AB6D8; }
+    .nav-right { display: flex; align-items: center; gap: 1rem; }
+    .lang-toggle { display: flex; gap: 3px; }
+    .lang-btn { font-family: 'Playfair Display', Georgia, serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; padding: 0.28rem 0.65rem; border: 1.5px solid #7AB6D8; background: transparent; color: #7AB6D8; border-radius: 4px; cursor: pointer; transition: all 0.18s; }
+    .lang-btn.active { background: #7AB6D8; color: #F1EFEB; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: #4d4a42; }
+
+    .hero { padding-top: 64px; min-height: 65vh; display: flex; align-items: center; background: #4A6375; position: relative; overflow: hidden; }
+    .hero::before { content: 'MEMENTO MORI'; position: absolute; font-family: 'Playfair Display', Georgia, serif; font-size: 12vw; font-weight: 800; color: rgba(241,239,235,0.03); white-space: nowrap; top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none; }
+    .hero-inner { max-width: 900px; margin: 0 auto; padding: 5rem 2rem; position: relative; z-index: 1; }
+    .hero-eyebrow { font-family: 'Playfair Display', Georgia, serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #7AB6D8; margin-bottom: 1rem; }
+    .hero-title { font-family: 'Playfair Display', Georgia, serif; font-size: 3rem; font-weight: 800; color: #F1EFEB; line-height: 1.1; margin-bottom: 0.75rem; }
+    .hero-tagline { font-family: 'Playfair Display', Georgia, serif; font-size: 1.3rem; font-weight: 300; color: rgba(241,239,235,0.6); margin-bottom: 1.5rem; letter-spacing: 0.05em; }
+    .hero-sub { font-size: 1rem; color: rgba(241,239,235,0.65); margin-bottom: 2rem; max-width: 540px; }
+    .info-chips { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 2rem; }
+    .chip { display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(241,239,235,0.08); border: 1px solid rgba(241,239,235,0.15); color: rgba(241,239,235,0.8); font-family: 'Playfair Display', Georgia, serif; font-size: 0.82rem; font-weight: 600; padding: 0.45rem 1rem; border-radius: 20px; }
+    .btn-primary { display: inline-block; background: #7AB6D8; color: #4A6375; font-family: 'Playfair Display', Georgia, serif; font-size: 0.9rem; font-weight: 700; padding: 0.9rem 2rem; border-radius: 6px; text-decoration: none; box-shadow: 0 4px 20px rgba(212,168,0,0.3); transition: all 0.18s; }
+    .btn-primary:hover { background: #5A96BA; transform: translateY(-2px); }
+
+    section { padding: 5rem 2rem; }
+    .container { max-width: 960px; margin: 0 auto; }
+    .section-eyebrow { font-family: 'Playfair Display', Georgia, serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #7AB6D8; margin-bottom: 0.65rem; }
+    .section-heading { font-family: 'Playfair Display', Georgia, serif; font-size: 1.85rem; font-weight: 700; color: #4A6375; margin-bottom: 2.5rem; line-height: 1.25; }
+    .section-text { color: #4d4a42; font-size: 0.97rem; line-height: 1.9; margin-bottom: 1.25rem; }
+
+    .benefits-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+    .benefit-card { background: #FDF4DA; border-left: 3px solid #7AB6D8; padding: 1.5rem; border-radius: 0 10px 10px 0; }
+    .benefit-card h3 { font-family: 'Playfair Display', Georgia, serif; font-size: 0.95rem; font-weight: 700; color: #4A6375; margin-bottom: 0.4rem; }
+    .benefit-card p { font-size: 0.87rem; color: #4d4a42; line-height: 1.6; }
+
+    .format-block { background: #FDF4DA; }
+    .format-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+    .format-steps { list-style: none; display: flex; flex-direction: column; gap: 1rem; }
+    .format-steps li { display: flex; gap: 1rem; align-items: flex-start; }
+    .step-num { width: 32px; height: 32px; background: #4A6375; color: #F1EFEB; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', Georgia, serif; font-size: 0.8rem; font-weight: 700; flex-shrink: 0; }
+    .step-text { font-size: 0.9rem; color: #4d4a42; line-height: 1.6; padding-top: 4px; }
+    .format-box { background: #4A6375; border-radius: 12px; padding: 2rem; color: #F1EFEB; }
+    .format-box .stat { text-align: center; padding: 1rem 0; border-bottom: 1px solid rgba(241,239,235,0.1); }
+    .format-box .stat:last-child { border-bottom: none; }
+    .format-box .stat-num { font-family: 'Playfair Display', Georgia, serif; font-size: 2.2rem; font-weight: 800; color: #7AB6D8; display: block; }
+    .format-box .stat-label { font-size: 0.8rem; color: rgba(241,239,235,0.6); }
+
+    .reviews-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+    .review-card { background: #FDF4DA; padding: 1.75rem; border-radius: 12px; }
+    .review-mark { font-family: Georgia, serif; font-size: 3rem; color: #7AB6D8; opacity: 0.3; line-height: 1; display: block; margin-bottom: 0.25rem; }
+    .review-text { font-size: 0.88rem; font-style: italic; color: #4d4a42; line-height: 1.8; margin-bottom: 1rem; }
+    .review-author { font-family: 'Playfair Display', Georgia, serif; font-size: 0.82rem; font-weight: 700; color: #4A6375; }
+
+    .register-block { background: #4A6375; }
+    .register-inner { text-align: center; max-width: 600px; margin: 0 auto; }
+    .register-inner h2 { font-family: 'Playfair Display', Georgia, serif; font-size: 2rem; font-weight: 800; color: #F1EFEB; margin-bottom: 1rem; }
+    .register-inner p { color: rgba(241,239,235,0.65); font-size: 1rem; line-height: 1.7; margin-bottom: 2rem; }
+    .price-highlight { font-family: 'Playfair Display', Georgia, serif; font-size: 3rem; font-weight: 800; color: #7AB6D8; display: block; margin-bottom: 0.5rem; }
+    .contact-link { color: #7AB6D8; font-family: 'Playfair Display', Georgia, serif; font-size: 1.1rem; font-weight: 700; text-decoration: none; display: block; margin-top: 1.5rem; }
+
+    footer { background: #263545; color: rgba(241,239,235,0.3); text-align: center; padding: 2rem; font-size: 0.78rem; }
+    footer a { color: rgba(241,239,235,0.45); text-decoration: none; }
+
+    @media (max-width: 900px) {
+      .nav-links { display: none; position: fixed; top: 64px; left: 0; right: 0; background: #F1EFEB; flex-direction: column; padding: 0.5rem 2rem 1rem; gap: 0; box-shadow: 0 6px 20px rgba(0,0,0,0.1); }
+      .nav-links.open { display: flex; }
+      .nav-links li { border-bottom: 1px solid #FDF4DA; }
+      .nav-links a { display: block; padding: 0.8rem 0; }
+      .hamburger { display: flex; }
+      .hero-title { font-size: 2.2rem; }
+      .benefits-grid, .format-inner, .reviews-grid { grid-template-columns: 1fr; }
+      section { padding: 3.5rem 1.5rem; }
+    }
+    /* ── Font role overrides ──────────────────────── */
+    .section-eyebrow, .hero-eyebrow,
+    .nav-links a, .lang-btn,
+    .btn-primary, .btn-outline, .btn-light,
+    .info-card .label, .credentials-title,
+    .hero-tag, .chip, .start-badge, .since-badge, .limited,
+    .month-name, .date-chip .month,
+    .hero-role, .facilitator-role, .fac-role,
+    .price-name, .price-dur,
+    .review-author, .experience-badge .lbl,
+    .case-group-title, .contact-lbl,
+    .stat-label, .big-label, .group-meta,
+    .info-card .sub, .since-badge, .hero-eyebrow {
+      font-family: 'BIZ UDPGothic', monospace;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="indexnat.html" class="nav-logo"><span class="ru">Н. Зайцева</span><span class="lv">N. Zaiceva</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="indexnat.html#about" onclick="closeNav()"><span class="ru">Обо мне</span><span class="lv">Par mani</span></a></li>
+    <li><a href="indexnat.html#groups" onclick="closeNav()"><span class="ru">Группы</span><span class="lv">Grupas</span></a></li>
+    <li><a href="supervizia.html" onclick="closeNav()"><span class="ru">Супервизия</span><span class="lv">Supervīzija</span></a></li>
+    <li><a href="indexnat.html#contact" onclick="closeNav()"><span class="ru">Контакты</span><span class="lv">Kontakti</span></a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="lang-toggle">
+      <button class="lang-btn active" id="btnRU" onclick="setLang('ru')">RU</button>
+      <button class="lang-btn" id="btnLV" onclick="setLang('lv')">LV</button>
+    </div>
+    <button class="hamburger" id="hamburger" onclick="toggleNav()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <p class="hero-eyebrow"><span class="ru">Онлайн-марафон · Закрытая группа</span><span class="lv">Tiešsaistes maratons · Slēgta grupa</span></p>
+    <h1 class="hero-title">Игромарафон<br>«Memento Mori»</h1>
+    <p class="hero-tagline"><span class="ru">За 7 дней — покончить с ленью и прокрастинацией</span><span class="lv">7 dienās — izbeigt slinkumu un prokrastināciju</span></p>
+    <p class="hero-sub"><span class="ru">Трансформационная игра-марафон с Натальей Зайцевой. Онлайн, до 10 участников.</span><span class="lv">Transformācijas spēle-maratons ar Natāliju Zaicevu. Tiešsaistē, līdz 10 dalībniekiem.</span></p>
+    <div class="info-chips">
+      <span class="chip">⏱ <span class="ru">7 дней</span><span class="lv">7 dienas</span></span>
+      <span class="chip">💰 €85</span>
+      <span class="chip">👥 <span class="ru">до 10 чел.</span><span class="lv">līdz 10 pers.</span></span>
+      <span class="chip">📱 <span class="ru">Facebook группа</span><span class="lv">Facebook grupa</span></span>
+    </div>
+    <a href="#register" class="btn-primary"><span class="ru">Записаться на следующий поток</span><span class="lv">Pieteikties nākamajai grupai</span></a>
+  </div>
+</section>
+
+<section style="background: #F1EFEB;" id="about">
+  <div class="container">
+    <p class="section-eyebrow"><span class="ru">Что вы получите</span><span class="lv">Ko jūs iegūsiet</span></p>
+    <h2 class="section-heading"><span class="ru">4 ключевых результата</span><span class="lv">4 galvenie rezultāti</span></h2>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <h3><span class="ru">Уверенность в управлении жизнью</span><span class="lv">Pārliecība dzīves pārvaldībā</span></h3>
+        <p><span class="ru">Вы почувствуете себя хозяином своей жизни, а не жертвой обстоятельств.</span><span class="lv">Jūs jusīsities kā savas dzīves saimnieks, nevis apstākļu upuris.</span></p>
+      </div>
+      <div class="benefit-card">
+        <h3><span class="ru">Техники самопомощи</span><span class="lv">Pašpalīdzības tehnikas</span></h3>
+        <p><span class="ru">Поймёте, как работает ваша прокрастинация и что с ней делать.</span><span class="lv">Sapratīsiet, kā darbojas jūsu prokrastinācija un ko ar to darīt.</span></p>
+      </div>
+      <div class="benefit-card">
+        <h3><span class="ru">Истинные ценности и мотивация</span><span class="lv">Patiesās vērtības un motivācija</span></h3>
+        <p><span class="ru">Откроете свои настоящие ценности и скрытую мотивацию к действию.</span><span class="lv">Atklāsiet savas patiesās vērtības un slēpto motivāciju rīkoties.</span></p>
+      </div>
+      <div class="benefit-card">
+        <h3><span class="ru">Ресурс для давних целей</span><span class="lv">Resurss senajiem mērķiem</span></h3>
+        <p><span class="ru">Наконец сделаете то, что откладывали: книга, бизнес, смена карьеры, здоровье.</span><span class="lv">Beidzot izdarīsiet to, ko atlicāt: grāmata, bizness, karjeras maiņa, veselība.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="format-block">
+  <div class="container">
+    <p class="section-eyebrow"><span class="ru">Как это работает</span><span class="lv">Kā tas darbojas</span></p>
+    <h2 class="section-heading"><span class="ru">Формат игромарафона</span><span class="lv">Spēles maratona formāts</span></h2>
+    <div class="format-inner">
+      <ul class="format-steps">
+        <li><div class="step-num">1</div><div class="step-text"><span class="ru">Вступительная сессия 30 минут с Натальей</span><span class="lv">Ievada sesija 30 minūtes ar Natāliju</span></div></li>
+        <li><div class="step-num">2</div><div class="step-text"><span class="ru">Закрытая Facebook-группа — ваше пространство на 7 дней</span><span class="lv">Slēgta Facebook grupa — jūsu telpa uz 7 dienām</span></div></li>
+        <li><div class="step-num">3</div><div class="step-text"><span class="ru">3 сообщения в день: задание утром, поддержка днём, рефлексия вечером</span><span class="lv">3 ziņojumi dienā: uzdevums rītā, atbalsts pusdienlaikā, refleksija vakarā</span></div></li>
+        <li><div class="step-num">4</div><div class="step-text"><span class="ru">Живая обратная связь от ведущего и группы</span><span class="lv">Dzīva atgriezeniskā saite no vadītāja un grupas</span></div></li>
+        <li><div class="step-num">5</div><div class="step-text"><span class="ru">По итогам — новое понимание себя и план действий</span><span class="lv">Pēc rezultātiem — jauna sevis izpratne un rīcības plāns</span></div></li>
+      </ul>
+      <div class="format-box">
+        <div class="stat"><span class="stat-num">7</span><span class="stat-label"><span class="ru">дней интенсивной работы</span><span class="lv">intensīva darba dienas</span></span></div>
+        <div class="stat"><span class="stat-num">3×</span><span class="stat-label"><span class="ru">сообщения каждый день</span><span class="lv">ziņojumi katru dienu</span></span></div>
+        <div class="stat"><span class="stat-num">10</span><span class="stat-label"><span class="ru">участников максимум</span><span class="lv">dalībnieki maksimums</span></span></div>
+        <div class="stat"><span class="stat-num">€85</span><span class="stat-label"><span class="ru">полная стоимость</span><span class="lv">pilna cena</span></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background: #F1EFEB;">
+  <div class="container">
+    <p class="section-eyebrow"><span class="ru">Отзывы</span><span class="lv">Atsauksmes</span></p>
+    <h2 class="section-heading"><span class="ru">Что говорят участники</span><span class="lv">Ko saka dalībnieki</span></h2>
+    <div class="reviews-grid">
+      <div class="review-card"><span class="review-mark">"</span><p class="review-text">Марафон запустил глубокие изменения. Я по-настоящему пересмотрела свои ценности и нашла мотивацию к действию.</p><div class="review-author">— Участница</div></div>
+      <div class="review-card"><span class="review-mark">"</span><p class="review-text">Помог разобраться с прокрастинацией, которая тормозила меня годами. Наталья создала безопасное и поддерживающее пространство.</p><div class="review-author">— Участник</div></div>
+      <div class="review-card"><span class="review-mark">"</span><p class="review-text">Наконец-то начала тот проект, который откладывала два года. Формат «игры» снимает тревогу и делает работу лёгкой.</p><div class="review-author">— Участница</div></div>
+      <div class="review-card"><span class="review-mark">"</span><p class="review-text">Группа даёт особую энергию — видеть, как другие тоже двигаются, очень мотивирует. Рекомендую!</p><div class="review-author">— Участник</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="register-block" id="register">
+  <div class="container">
+    <div class="register-inner">
+      <h2><span class="ru">Записаться на следующий поток</span><span class="lv">Pieteikties nākamajai grupai</span></h2>
+      <span class="price-highlight">€85</span>
+      <p><span class="ru">До 10 участников. Свяжитесь с Натальей, чтобы узнать дату следующего запуска и забронировать место.</span><span class="lv">Līdz 10 dalībniekiem. Sazinieties ar Natāliju, lai uzzinātu nākamā starta datumu un rezervētu vietu.</span></p>
+      <a href="indexnat.html#contact" class="btn-primary"><span class="ru">Связаться</span><span class="lv">Sazināties</span></a>
+      <a href="tel:+37125916374" class="contact-link">+371 259 16374</a>
+    </div>
+  </div>
+</section>
+
+<footer><p><span class="ru">© 2025 Наталья Зайцева · <a href="indexnat.html">На главную</a></span><span class="lv">© 2025 Natālija Zaiceva · <a href="indexnat.html">Uz sākumlapu</a></span></p></footer>
+
+<script>
+  function setLang(l) { document.documentElement.setAttribute('lang',l); document.getElementById('btnRU').classList.toggle('active',l==='ru'); document.getElementById('btnLV').classList.toggle('active',l==='lv'); try{localStorage.setItem('nz_lang',l);}catch(e){} }
+  function toggleNav() { document.getElementById('navLinks').classList.toggle('open'); }
+  function closeNav() { document.getElementById('navLinks').classList.remove('open'); }
+  try{ var s=localStorage.getItem('nz_lang'); if(s==='lv') setLang('lv'); }catch(e){}
+</script>
+</body>
+</html>
